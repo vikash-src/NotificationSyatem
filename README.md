@@ -1,6 +1,6 @@
 # NotificationSystem
 
-It is a centralized generic service for notifications that can be used by a variety applications for their notification needs. It accepts messages in a JSON String format. [Sample message can be seen here](#-sample-message). currently it has only Email processor but the design it capable of easily adding various types of messages.
+It is a centralized generic service for notifications that can be used by a variety applications for their notification needs. It accepts messages in a JSON String format. [Sample message can be seen here](#sample-message). Currently it has only Email processor but the design it capable of easily adding various types of messages.
 
 # Requirements
   * Java 1.8 or newer
