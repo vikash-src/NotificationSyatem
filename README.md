@@ -37,8 +37,8 @@ Custom logging can be configured for this project using logback.xml. For configu
       
 ## Configuration
 This project has 2 configuration files with default values.
- * **[application.yaml](NotificationSystem/tree/master/src/main/java/resources/application-dev.yaml)**
- * **[smtpConfig.properties](NotificationSystem/tree/master/src/main/java/resources/smtpConfig.properties)**
+ * **[application.yaml](src/main/java/resources/application-dev.yaml)**
+ * **[smtpConfig.properties](src/main/java/resources/smtpConfig.properties)**
 
 **Note** All the properties can be customized. 
 For customizing you can create new files and customized values. once you create the custom file it can be used by adding following config to `start.sh` or command line: 
