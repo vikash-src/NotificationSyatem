@@ -10,12 +10,6 @@ email:
 spring:
  profile.active: local
  main.allow-bean-definition-overriding: true
- data:
-  mongodb:
-   uri: mongodb://root:root@localhost:27017/NotificationSystem?ssl=false
-   authentication-database: admin
-   smtp.profile.collection.name: smtpProfile
-   email.audit.collection.name : emailAudit
  kafka:
   consumer:
    enable.kafka: true
