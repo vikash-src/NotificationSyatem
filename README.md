@@ -23,7 +23,7 @@ run start.sh from terminal
 ### Windows Environment
 you can run NotificationSystem.jar directly from root directory using command line
 
-      java -jar lib\Notification.jar
+      java -jar lib\NotificationSystem.jar
       
 **Note**
 This project runs on default port 8080. This can be overridden by adding following config to `start.sh` or command line: 
