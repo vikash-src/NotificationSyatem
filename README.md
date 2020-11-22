@@ -1,6 +1,6 @@
 # NotificationSystem
 
-It is a centralized generic service for notification that can be used by a variety consuming application for their notification needs. It accepts messages in a generic format. currently it has only Email processor but the design it capable of easily adding various types of messages.
+It is a centralized generic service for notifications that can be used by a variety applications for their notification needs. It accepts messages in a JSON String format. currently it has only Email processor but the design it capable of easily adding various types of messages.
 
 # Requirements
   * Java 1.8 or newer
@@ -36,3 +36,26 @@ Custom logging can be configured for this project using logback.xml. For configu
       -Dlogging.config=<path to logback.xml>
       
 ## Configuration
+This project has 2 configuration files with default values.
+ * **[application.yaml](NotificationSystem/tree/master/src/main/java/resources/application-dev.yaml)**
+ * **[smtpConfig.properties](NotificationSystem/tree/master/src/main/java/resources/smtpConfig.properties)**
+
+**Note** All the properties can be customized. 
+For customizing you can create new files and customized values. once you create the custom file it can be used by adding following config to `start.sh` or command line: 
+       
+       -Dspring.config.location=file:<file-path1>,file:<file-path2>
+
+
+ ## Sample Message
+    ```
+    {
+    "from":"vikash@gmail.com",
+    "to":["to.@gmail.com"],
+    "cc":["cc.@gmail.com"],
+    "bcc":["bcc.@gmail.com"],
+    "subject":"Subject",
+    "body":"This is body",
+    "smtpProfileId":null,
+    "notificationType":"EMAIL"
+    }
+    ```
