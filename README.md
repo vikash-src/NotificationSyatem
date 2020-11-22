@@ -37,7 +37,7 @@ Custom logging can be configured for this project using logback.xml. For configu
       
 ## Configuration
 This project has 2 configuration files with default values.
- * **[application.yaml](src/main/java/resources/application-dev.yaml)**
+ * **[application.yaml](src/main/resources/application.yaml)**
  * **[smtpConfig.properties](src/main/java/resources/smtpConfig.properties)**
 
 **Note** All the properties can be customized. 
