@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.apache.kafka:kafka-clients'
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'net.jodah:failsafe:2.4.0'
+    
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.1'
+    compile group: 'javax.mail', name: 'javax.mail-api', version: '1.6.2'
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+
+}

@@ -1,0 +1,35 @@
+server:
+ port: 8080
+email:
+ reciepient.limit : 10
+ mock.sender : false
+ processor: 
+  enable: true
+  retryCount : 3
+  retryInterval : 3
+spring:
+ profile.active: local
+ main.allow-bean-definition-overriding: true
+ data:
+  mongodb:
+   uri: mongodb://root:root@localhost:27017/NotificationSystem?ssl=false
+   authentication-database: admin
+   smtp.profile.collection.name: smtpProfile
+   email.audit.collection.name : emailAudit
+ kafka:
+  consumer:
+   enable.kafka: true
+   bootstrap-servers: localhost:9092
+   auto-offset-reset: earliest
+   group-id: Notification
+   key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+   value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+   enable.auto.commit: false
+   allow.auto.create.topics: false
+  topics:
+   -
+    name: Notification_Q
+    num-partitions: 10
+    replication-factor: 1
+    auto-create: true
+
